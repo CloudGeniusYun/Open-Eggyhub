@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态：使用eggyhub蓝色 -->
+    <item android:color="@color/blue_eggyhub" android:state_checked="true"/>
+    <!-- 未选中状态：使用浅灰色 -->
+    <item android:color="#F5F5F5" android:state_checked="false"/>
+</selector>

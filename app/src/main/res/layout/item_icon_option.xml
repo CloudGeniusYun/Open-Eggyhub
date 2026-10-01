@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- 增大图标尺寸 -->
+    <ImageView
+        android:id="@+id/imageIconPreview"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:padding="2dp" />
+
+    <!-- 文字尺寸保持 10sp，允许换行显示两行 -->
+    <TextView
+        android:id="@+id/textViewIconName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:minHeight="28dp" />
+
+    <!-- 进一步缩小单选框尺寸 -->
+    <RadioButton
+        android:id="@+id/radioSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:buttonTint="@color/blue_eggyhub"
+        android:scaleX="0.65"
+        android:scaleY="0.65"
+        android:minHeight="0dp"
+        android:minWidth="0dp" />
+
+    <View
+        android:id="@+id/viewSelectedIndicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>

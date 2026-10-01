@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="?android:attr/colorBackground">
+
+    <!-- 网络切换按钮（左上角） -->
+    <ImageButton
+        android:id="@+id/btnNetworkSwitch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_cloud_gray"
+        android:contentDescription="切换网络"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/loginTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户登录"
+            android:textSize="34sp"
+            android:textColor="#4285F4"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册账号"
+            android:textColor="#4285F4"
+            android:background="@android:color/transparent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/forgotPasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            android:textColor="#4285F4"
+            android:background="@android:color/transparent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名/邮箱:"
+            android:textColor="#4285F4"
+            android:textSize="16sp"
+            android:layout_gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="用户名/邮箱"
+            android:inputType="text"
+            android:background="@drawable/rounded_edittext_background"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码:"
+            android:textColor="#4285F4"
+            android:textSize="16sp"
+            android:layout_gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edittext_background"
+            android:layout_marginBottom="30dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:layout_width="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:backgroundTint="#1E90FF"/>
+
+            <Button
+                android:id="@+id/testLoadingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试加载弹窗"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                tools:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="—— 联 合 登 录 ——"
+            android:textColor="#AAAAAA"
+            android:textSize="10sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/jloginButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/j"
+            android:background="@drawable/circle_shape"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过 >"
+        android:textColor="#888888"
+        android:textSize="20sp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:padding="8dp"/>
+
+</FrameLayout>

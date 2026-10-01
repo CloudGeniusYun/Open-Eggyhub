@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底层渐变 -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="#00000000"
+                android:startColor="#662196F3" />
+        </shape>
+    </item>
+    
+    <!-- 圆点背景 -->
+    <item 
+        android:drawable="@drawable/bg_dots_vector"
+        android:gravity="center" />
+</layer-list>

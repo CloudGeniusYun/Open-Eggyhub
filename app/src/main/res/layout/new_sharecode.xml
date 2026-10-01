@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CodeupActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布分享码"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享码名称"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/sharecode_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="请输入分享码名称"
+            android:background="@drawable/rounded_edittext_background"
+            android:padding="10dp"
+            android:textColorHint="#999999" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="分享码"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/first_code_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:hint="请输入13位分享码"
+            android:padding="10dp"
+            android:textColorHint="#999999" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="封面图片"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/image_select_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+            <TextView
+                android:id="@+id/file_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="点击上传封面"
+                android:textColor="#999999"
+                android:textSize="14dp" />
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:text="设置蛋码碎片数量"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <SeekBar
+                android:id="@+id/egg_code_quantity_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:max="80"
+                android:min="50"
+                android:progress="50"
+                android:thumbTint="@color/blue_eggyhub"
+                android:progressTint="@color/blue_eggyhub"/>
+                
+            <TextView
+                android:id="@+id/egg_code_quantity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="50"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="内容描述"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/description_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:hint="请输入分享码描述"
+            android:padding="10dp"
+            android:textColorHint="#999999" />
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/publish_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="上传"
+            android:textSize="16sp"
+            android:textColor="@color/blue_eggyhub"
+            android:background="@color/blue_eggyhub"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:enabled="true" />
+    </LinearLayout>
+</LinearLayout>

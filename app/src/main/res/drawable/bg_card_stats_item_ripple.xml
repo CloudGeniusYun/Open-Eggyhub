@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#200096FF"> <!-- 稍微加深一点水波纹颜色，使其更明显 -->
+    <item android:id="@android:id/mask">
+        <shape>
+            <corners android:radius="16dp" />
+            <solid android:color="@android:color/black" />
+        </shape>
+    </item>
+</ripple>

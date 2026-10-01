@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Eggyhub</string>
+    <string name="register_account"><u>注册账号</u></string>
+    
+    <!-- 底部导航栏 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_publish">发布</string>
+    <string name="nav_task">任务</string>
+    <string name="nav_my">我的</string>
+    
+    <!-- 主页 -->
+    <string name="search_hint">搜索</string>
+    
+    <!-- 发布页 -->
+    <string name="publish_title">发布</string>
+    <string name="publish_article">发布文章</string>
+    <string name="publish_video">发布视频</string>
+    <string name="publish_share_code">发布分享码</string>
+    <string name="publish_file">发布文件</string>
+    
+    <!-- 任务页 -->
+    <string name="task_title">任务</string>
+    
+    <!-- 我的页面 -->
+    <string name="profile_title">我的</string>
+    <string name="file_manage">移动端QQ群</string>
+    <string name="my_likes">创作者主页</string>
+    <string name="about_app">关于</string>
+    <string name="contact_admin">联系管理员</string>
+    <string name="settings">内容管理</string>
+    <string name="help">赞助</string>
+    <!-- 网路异常界适配器-->
+    <string name="neterr">网络异常</string>
+    <string name="ph">个人信息</string>
+    <string name="copy_error">复制错误信息</string>
+    <string name="contact_developer">联系开发者</string>
+    
+    <string-array name="selection_options">
+        <item>文章</item>
+        <item>视频</item>
+        <item>分享码</item>
+    </string-array>
+</resources>

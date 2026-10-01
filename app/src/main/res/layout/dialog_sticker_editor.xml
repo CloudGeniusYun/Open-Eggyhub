@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#2A2A2A">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="卡片样式编辑器（高级定制）"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 恢复默认按钮 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRestoreDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="恢复默认"
+            android:textSize="12sp"
+            app:cornerRadius="18dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="#1E90FF"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvStickerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0个贴纸"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp" />
+    </LinearLayout>
+
+    <!-- 编辑区域 -->
+    <FrameLayout
+        android:id="@+id/editorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:layout_above="@id/toolBar">
+
+        <com.eggyhub.android.views.StickerEditorView
+            android:id="@+id/stickerEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- 底部工具栏 -->
+    <LinearLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#2A2A2A">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddSticker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加贴纸"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="#4CAF50"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.Button.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLayerManager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="图层"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_menu_sort_by_size"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="#FF9800"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.Button.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBorderSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="边框"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_menu_edit"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="#9C27B0"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.Button.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_menu_save"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="#2196F3"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.Button.Icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="#F44336"
+            style="@style/Widget.MaterialComponents.Button.Icon" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Chip圆角半径 -->
+    <dimen name="chip_corner_radius">8dp</dimen>
+</resources>

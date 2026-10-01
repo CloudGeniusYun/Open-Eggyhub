@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- 预览图 -->
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:background="#F0F0F0" />
+
+    <!-- 图层信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/tvLayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图层 1"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLayerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="缩放: 100% | 旋转: 0°"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- 操作按钮组 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 置顶 -->
+        <ImageButton
+            android:id="@+id/btnMoveToTop"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_layer_top"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="置顶"
+            android:padding="4dp" />
+
+        <!-- 置底 -->
+        <ImageButton
+            android:id="@+id/btnMoveToBottom"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_layer_bottom"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="置底"
+            android:padding="4dp"
+            android:layout_marginStart="4dp" />
+
+        <!-- 拖动排序手柄（长按拖动） -->
+        <ImageView
+            android:id="@+id/ivDragHandle"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_drag_handle"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="拖动排序" />
+
+        <!-- 圆角裁剪设置 -->
+        <ImageButton
+            android:id="@+id/btnClipToRoundedCorners"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_crop"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="圆角裁剪"
+            android:padding="4dp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

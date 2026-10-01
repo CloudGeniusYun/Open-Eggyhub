@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- ★ 新增的外层容器，用于整体缩放 -->
+    <FrameLayout
+        android:id="@+id/outerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- 原来的弹窗容器 -->
+        <FrameLayout
+            android:id="@+id/dialogContainer"
+            android:layout_width="770dp"
+            android:layout_height="440dp"
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <!-- 背景图片 -->
+            <ImageView
+                android:layout_width="730dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_notice_bg" />
+
+            <!-- 大标题 -->
+            <com.eggyhub.android.view.StrokeTextView
+                android:id="@+id/mainTitleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7月23日电竞节×惊魂节·双节同开公告"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="12dp"
+                android:fontFamily="@font/hkxzyt_w9_gb"
+                app:strokeColor="#ff8914"
+                app:strokeWidth="5dp" />
+
+            <!-- 内容层 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="120dp"
+                android:paddingBottom="60dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="115dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <!-- 左侧标题列 -->
+                <LinearLayout
+                    android:id="@+id/titlesContainer"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginStart="-20dp">
+
+                    <!-- 标题1 -->
+                    <FrameLayout
+                        android:id="@+id/titleContainer1"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="-1dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <ImageView
+                            android:id="@+id/titleBg1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/notice_btn_tab"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/titleItem1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="维护公告"
+                            android:textColor="#FF000000"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="45dp"
+                            android:paddingEnd="-8dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:fontFamily="@font/hkxzyt_w9_gb" />
+                    </FrameLayout>
+
+                    <!-- 分隔线1 -->
+                    <ImageView
+                        android:id="@+id/line1"
+                        android:layout_width="70dp"
+                        android:layout_height="3dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notice_line"
+                        android:layout_marginTop="-6dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginBottom="3dp" />
+
+                    <!-- 标题2 -->
+                    <FrameLayout
+                        android:id="@+id/titleContainer2"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="-1dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <ImageView
+                            android:id="@+id/titleBg2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/notice_btn_tab"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/titleItem2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="玩法更新"
+                            android:textColor="#FF000000"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="45dp"
+                            android:paddingEnd="-8dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:fontFamily="@font/hkxzyt_w9_gb" />
+                    </FrameLayout>
+
+                    <!-- 分隔线2 -->
+                    <ImageView
+                        android:id="@+id/line2"
+                        android:layout_width="70dp"
+                        android:layout_height="3dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notice_line"
+                        android:layout_marginTop="-6dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginBottom="3dp" />
+
+                    <!-- 标题3 -->
+                    <FrameLayout
+                        android:id="@+id/titleContainer3"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="-1dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <ImageView
+                            android:id="@+id/titleBg3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/notice_btn_tab"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/titleItem3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="乐园&amp;工坊更新"
+                            android:textColor="#FF000000"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="45dp"
+                            android:paddingEnd="-8dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:fontFamily="@font/hkxzyt_w9_gb" />
+                    </FrameLayout>
+
+                    <!-- 分隔线3 -->
+                    <ImageView
+                        android:id="@+id/line3"
+                        android:layout_width="70dp"
+                        android:layout_height="3dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notice_line"
+                        android:layout_marginTop="-6dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginBottom="3dp" />
+
+                    <!-- 标题4 -->
+                    <FrameLayout
+                        android:id="@+id/titleContainer4"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="-1dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:padding="0dp" >
+
+                        <ImageView
+                            android:id="@+id/titleBg4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/notice_btn_tab"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/titleItem4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="活动更新更新更新更新"
+                            android:textColor="#FF000000"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="45dp"
+                            android:paddingEnd="-8dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:fontFamily="@font/hkxzyt_w9_gb" />
+                    </FrameLayout>
+
+                    <!-- 分隔线4 -->
+                    <ImageView
+                        android:id="@+id/line4"
+                        android:layout_width="70dp"
+                        android:layout_height="3dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notice_line"
+                        android:layout_marginTop="-6dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginBottom="3dp" />
+
+                    <!-- 标题5 -->
+                    <FrameLayout
+                        android:id="@+id/titleContainer5"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="-1dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false">
+
+                        <ImageView
+                            android:id="@+id/titleBg5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/notice_btn_tab"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/titleItem5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="调整优化"
+                            android:textColor="#FF000000"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="45dp"
+                            android:paddingEnd="-8dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:fontFamily="@font/hkxzyt_w9_gb" />
+                    </FrameLayout>
+
+                    <!-- 分隔线5 -->
+                    <ImageView
+                        android:id="@+id/line5"
+                        android:layout_width="70dp"
+                        android:layout_height="3dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notice_line"
+                        android:layout_marginTop="-6dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginBottom="3dp" />
+
+                </LinearLayout>
+
+                <!-- 右侧内容区 -->
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:layout_marginTop="-10dp">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/contentScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        android:paddingStart="1.5dp"
+                        android:paddingEnd="3dp"
+                        android:layout_marginEnd="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/contentContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- 静态演示内容，实际由代码动态生成 -->
+                            <TextView
+                                android:id="@+id/contentText1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/huawenyuantibold"
+                                android:lineSpacingExtra="4dp"
+                                android:paddingStart="5dp"
+                                android:paddingTop="4dp"
+                                android:paddingEnd="16dp"
+                                android:paddingBottom="12dp"
+                                android:text="维护时间：2026年7月30日 00:00-06:00\n维护内容：服务器优化，修复已知问题\n感谢您的理解与支持！"
+                                android:textColor="#FF000000"
+                                android:textSize="14sp" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/img_play_pic" />
+
+                                <com.eggyhub.android.view.StrokeTextView
+                                    android:id="@+id/categoryTitle1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="玩法更新"
+                                    android:textColor="#ef5a09"
+                                    android:textSize="27sp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/hkxzyt_w9_gb"
+                                    app:strokeColor="#FFFFFF"
+                                    app:strokeWidth="6dp" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="5dp"
+                                    android:src="@drawable/img_title_bg" />
+
+                                <com.eggyhub.android.view.StrokeTextView
+                                    android:id="@+id/subtitleText2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="一、神奇艾比"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14sp"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="9dp"
+                                    android:paddingBottom="8dp"
+                                    android:paddingStart="17dp"
+                                    android:paddingEnd="16dp"
+                                    android:fontFamily="@font/huawenyuantibold"
+                                    app:strokeColor="#ff6825"
+                                    app:strokeWidth="4dp" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/contentText2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="全新探索资料片&lt;都市泊风港&gt;开放了！\n更新时间：7月17日10:00\n千年后的艾比新世界-泊风港，这座蛋仔和艾比一起建设、共同生活的城市，终于揭开面纱。"
+                                android:textColor="#FF000000"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="4dp"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="16dp"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="12dp"
+                                android:fontFamily="@font/huawenyuantibold" />
+
+                            <!-- 其他隐藏内容（示例） -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="活动更新"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="夏日狂欢节活动开启"
+                                android:textColor="#FF000000"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="4dp"
+                                android:paddingBottom="16dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="乐园更新"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="新增地图：梦幻城堡"
+                                android:textColor="#FF000000"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="4dp"
+                                android:paddingBottom="16dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="系统更新"
+                                android:textColor="#FF000000"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="优化性能，修复已知问题"
+                                android:textColor="#FF000000"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="4dp"
+                                android:paddingBottom="16dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <!-- 自定义滚动条 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="55dp">
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/img_notice_bg_bar"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="false"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="8dp" />
+
+                        <ImageView
+                            android:id="@+id/scrollbarThumb"
+                            android:layout_width="4dp"
+                            android:layout_height="21.7dp"
+                            android:src="@drawable/img_notice_bg_bar_btn"
+                            android:scaleType="fitCenter"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginStart="0dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- 关闭按钮 -->
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="47dp"
+                android:layout_marginEnd="78dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/img_btn_close"
+                android:scaleType="fitCenter"
+                android:contentDescription="关闭" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态：蓝色小点 -->
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- 外圈：蓝色边框 -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@android:color/transparent"/>
+                    <size android:width="20dp" android:height="20dp"/>
+                    <stroke android:width="2dp" android:color="@color/blue_eggyhub"/>
+                </shape>
+            </item>
+            <!-- 内圈：蓝色小点 -->
+            <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/blue_eggyhub"/>
+                    <size android:width="8dp" android:height="8dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- 未选中状态：灰色边框 -->
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent"/>
+            <size android:width="20dp" android:height="20dp"/>
+            <stroke android:width="2dp" android:color="#999999"/>
+        </shape>
+    </item>
+</selector>

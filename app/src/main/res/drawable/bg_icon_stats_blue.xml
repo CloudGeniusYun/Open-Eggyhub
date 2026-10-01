@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/color_card_background_half_blue" /> <!-- 使用实色浅蓝，在白色卡片上更有质感 -->
+</shape>

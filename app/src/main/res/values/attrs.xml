@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="taskCardBackgroundColor" format="color" />
+    <attr name="taskCardTextColor" format="color" />
+    <attr name="statTextColor" format="color" />
+
+    <!-- StrokeTextView 自定义属性 -->
+    <declare-styleable name="StrokeTextView">
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeButton">
+        <attr name="shapeType" format="enum">
+            <enum name="leftTrapezoid" value="0"/>
+            <enum name="rightTrapezoid" value="1"/>
+            <enum name="parallelogram" value="2"/>
+        </attr>
+        <attr name="skewRatio" format="float"/>
+        <attr name="cornerRadius" format="dimension"/>
+        <!-- 图片资源 -->
+        <attr name="srcCompat" format="reference"/>
+        <attr name="scaleType" format="enum">
+            <enum name="center" value="0"/>
+            <enum name="centerCrop" value="1"/>
+            <enum name="centerInside" value="2"/>
+            <enum name="fitCenter" value="3"/>
+            <enum name="fitStart" value="4"/>
+            <enum name="fitEnd" value="5"/>
+            <enum name="fitXY" value="6"/>
+            <enum name="matrix" value="7"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

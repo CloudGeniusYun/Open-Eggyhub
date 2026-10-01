@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择应用图标"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <!-- 红色警示条 -->
+    <TextView
+        android:id="@+id/tvIconChangeNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff4444"
+        android:padding="8dp"
+        android:text="极简图标为透明背景图标，部分手机会出现白色背景，此属于厂商定制包体问题，不属于bug，无法解决"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:gravity="start" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+</LinearLayout>

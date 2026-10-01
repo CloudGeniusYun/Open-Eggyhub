@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <!-- 存储权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="ntes" android:host="game.mobile" />
+        </intent>
+    </queries>
+    <application
+        android:name=".EggyApp"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:extractNativeLibs="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Eggyhub"
+        tools:replace="android:allowBackup,android:label,android:icon,android:theme,android:name">
+        
+        <activity
+            android:name="com.eggyhub.android.SplashActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Scheme处理Activity -->
+        <activity
+            android:name="com.eggyhub.android.SchemeHandlerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Eggyhub.TransparentActivity">
+            <!-- Scheme支持 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="eggyhub"
+                    android:host="android"
+                    android:path="/open" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.eggyhub.android.IntroActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Eggyhub" />
+
+        <!-- 默认图标别名 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherDefault"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 新年图标 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherNewYear"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_newyear"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 白色透明图标 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherWhite"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_white"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 黑色透明图标 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherDark"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_dark"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 虚假加固声明 (迷惑扫描器) -->
+        <meta-data
+            android:name="ECI_SECURE_ENGINE"
+            android:value="v1.4.0_enforced" />
+        <meta-data
+            android:name="com.eci.security.STUB_NAME"
+            android:value="ECI安全加密逻辑" />
+
+        <!-- 赞助者图标 1 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherSponsor1"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_sponsor1"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 赞助者图标 2 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherSponsor2"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_sponsor2"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 赞助者图标 3 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherSponsor3"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_sponsor3"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 赞助者图标 4 -->
+        <activity-alias
+            android:name="com.eggyhub.android.LauncherSponsor4"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_sponsor4"
+            android:label="@string/app_name"
+            android:targetActivity="com.eggyhub.android.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name="com.eggyhub.android.AuthActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Eggyhub"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name="com.eggyhub.android.LoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name="com.eggyhub.android.JLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BiliPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize"
+            android:exported="true"
+            android:supportsPictureInPicture="true"
+            android:screenOrientation="unspecified" />
+
+        <activity
+            android:name="com.eggyhub.android.MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize">
+        </activity>
+
+        <!-- 公告板布局编辑器 -->
+        <activity
+            android:name="com.eggyhub.android.activity.NoticeBoardLayoutEditorActivity"
+            android:exported="false"
+            android:label="公告板布局编辑器"
+            android:theme="@style/Theme.Eggyhub" />
+
+        <activity
+            android:name="com.eggyhub.android.PublishActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ImagePreviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Eggyhub.FullScreen" />
+
+        <activity
+            android:name="com.eggyhub.android.FilePreviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Eggyhub.FullScreen" />
+            
+        <activity
+            android:name="com.eggyhub.android.TaskActivity"
+            android:exported="false" />
+            
+
+            
+        <activity
+            android:name="com.eggyhub.android.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ArticleActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ArticleDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.VideoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ShareCodeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.CompetitionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ClaimedShareCodeActivity"
+            android:exported="false" />
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.eggyhub.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name="com.eggyhub.android.CreateArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.UserAgreementActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.linkedVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.PersonalHomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.CodeupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.NewFileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.MangerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.MangerVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.ManagerCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.MailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.SponsorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.GratitudeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.CreatorHomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eggyhub.android.FileRepoActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.eggyhub.android.FileActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.eggyhub.android.OverlaySettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.CardViewStyleSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.eggyhub.android.ClipboardHelperActivity"
+            android:theme="@style/Theme.Eggyhub.TransparentActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"/>
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name=".OverlayService" android:enabled="true" android:exported="false" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout" android:foregroundServiceType="specialUse"/>
+        <service android:name=".FirstOverlayService" android:enabled="true" android:exported="false" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout" android:foregroundServiceType="specialUse"/>
+        <service android:name=".MinimizeIconService" android:enabled="true" android:exported="false" android:foregroundServiceType="specialUse"/>
+
+        <provider
+            android:name=".log.LogProvider"
+            android:authorities="com.eggyhub.android.logprovider"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

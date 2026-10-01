@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:attr/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="上传文件"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上传文件"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="仓库名称与描述请移步“我的”->“内容管理”"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/file_select_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?android:attr/colorBackground"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/file_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="点击上传"
+                android:background="@drawable/rounded_edittext_background"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/upload_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="上传"
+            android:textSize="16sp"
+            android:textColor="@color/blue_eggyhub"
+            android:background="@color/blue_eggyhub"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

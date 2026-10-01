@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="蛋码hub（eggyhub.top）用户协议及隐私政策"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- 用户协议部分 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一、用户协议"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 协议生效 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. 协议生效与适用"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本协议是您与蛋码hub（eggyhub.top）之间关于使用本网站服务的法律协议。您访问、注册、使用本网站服务，即视为您已阅读并同意本协议全部条款。若您不同意，请勿使用本网站。"
+            android:paddingBottom="8dp"/>
+
+        <!-- 用户资格 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. 用户资格"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 您需年满8周岁（若当地法律规定更高年龄，则以当地规定为准）"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 禁止利用本网站服务从事任何违法活动或侵害他人合法权益的行为"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 账号与安全 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. 账号与安全"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 注册需提供真实、准确信息，并对账号安全负责"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 妥善保管账号密码，因泄露导致的损失自行承担"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 未经允许不得出售账号"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 服务内容 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. 服务内容与使用规则"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="服务包括：蛋码分享、模拟器、教程浏览、比赛参与等"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用规则："
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 不得发布违法侵权内容"
+            android:paddingLeft="32dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 不得传播虚假信息或恶意代码"
+            android:paddingLeft="32dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 仅限《蛋仔派对》合规使用，禁止作弊"
+            android:paddingLeft="32dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 知识产权 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. 知识产权"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 网站知识产权归本网站所有"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 用户发布内容知识产权归用户所有"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 禁止盗用他人内容"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 免责声明 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. 免责声明"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 个人非盈利平台，对用户内容不做担保"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 因不可抗力导致服务暂停不承担赔偿"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 第三方内容不受本协议约束"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 用户违规行为自行承担责任"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 本网站不包括任何付费服务"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 协议修改 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7. 协议修改与终止"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 本网站有权修改协议，继续使用视为同意"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 违规用户将暂停或终止服务"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 法律适用 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8. 法律适用与争议解决"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="未尽事宜以国家法律法规为准，可通过网站反馈建议咨询"
+            android:paddingBottom="16dp"/>
+
+        <!-- 隐私政策部分 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="二、隐私政策"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 引言 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. 引言"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="说明个人信息收集、使用及保护规则，使用服务即视为同意"
+            android:paddingBottom="8dp"/>
+
+        <!-- 信息收集 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. 收集的信息"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 必要信息：注册用户名、操作记录"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 非必要信息：发布内容时主动提供的昵称/头像"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 信息使用 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. 信息的使用"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="仅用于：提供服务、安全保障、重要通知"
+            android:paddingBottom="8dp"/>
+
+        <!-- 信息保护 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. 信息的保护"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 采取合理技术措施保护信息安全"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 个人运营限制，无法达到企业级安全标准"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 信息共享 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. 信息的共享与披露"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 不会向第三方出售或出租信息"
+            android:paddingLeft="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 披露情形：配合司法调查、保护权益"
+            android:paddingLeft="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- 用户权利 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. 用户的权利"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="可通过网站申请：访问信息、修改信息、删除账号、恢复数据"
+            android:paddingBottom="8dp"/>
+
+        <!-- 未成年人 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7. 未成年人保护"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="未成年人应在监护人同意下使用，不主动收集敏感信息"
+            android:paddingBottom="8dp"/>
+
+        <!-- 政策修改 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8. 政策修改"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改后通过公告通知，继续使用视为同意"
+            android:paddingBottom="8dp"/>
+
+        <!-- 联系我们 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9. 联系我们"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="通过网站“关于网站”中的交流群或联系方式沟通"
+            android:paddingBottom="16dp"/>
+
+        <!-- 生效日期 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生效日期：2025年8月6日"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="运营者：蛋码hub个人爱好者团队（主要管理员水杨酸酸）"
+            android:textStyle="italic"
+            android:paddingBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>
